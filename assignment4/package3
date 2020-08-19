@@ -1,0 +1,23 @@
+package Milesmeter;
+import java.util.Scanner;
+
+/**
+ *
+ * @author AakashChandha
+ */
+public class Kilometer_to_Milesmeter {
+   public void k()
+    {
+        Scanner obj=new Scanner(System.in);
+        System.out.println("Converting kilometer to meter:");
+        System.out.println("Enter the kilometer value:");        
+        double kilo=obj.nextInt();
+        double meter=kilo*1000;
+        System.out.println(kilo+"kilometer="+meter+"meter");
+        System.out.println("Converting kilometer to miles:");
+        System.out.println("Enter the kilometer value:");
+        double kilo1=obj.nextInt();
+        double miles=kilo/1.609344;
+        System.out.println(kilo+"kilometer="+miles+"miles");
+    }
+}
