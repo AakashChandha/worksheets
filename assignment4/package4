@@ -1,0 +1,12 @@
+package Second_Package;
+
+/**
+ *
+ * @author Aakash Chandha
+ */
+public class Second_Class {
+     public void second()
+    {
+        System.out.println("Accessing of the second package...");
+    }
+}
