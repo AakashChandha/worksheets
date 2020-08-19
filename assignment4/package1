@@ -1,0 +1,12 @@
+oopspackage MainClass_of_two_programs; 
+import First_Package.*; 
+import Second_Package.*; 
+import Second_Package.Sub_Package.*; /** * * @author AakashChandha */
+public class Accessing_All_Packages {
+public static void main(String[] args)
+{ First_Class f=new First_Class(); 
+f.first(); 
+Second_Class s=new Second_Class(); 
+s.second(); 
+Third_Class t=new Third_Class(); 
+t.third(); } }
