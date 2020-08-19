@@ -1,0 +1,12 @@
+package First_Package;
+
+/**
+ *
+ * @author AakashChandha
+ */
+public class First_Class {
+    public void first()
+    {
+        System.out.println("Accessing of the first package...");
+    }
+}
