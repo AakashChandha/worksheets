@@ -1,0 +1,12 @@
+package Second_Package.Sub_Package;
+
+/**
+ *
+ * @author AakashChandha
+ */
+public class Third_Class {
+     public void third()
+    {
+        System.out.println("Accessing the subpackage of secondpackage...");
+    }
+}
