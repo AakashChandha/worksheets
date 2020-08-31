@@ -1,0 +1,80 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author aakashchandha
+ */
+class privatevehicle extends car {
+    String number;
+    String name;
+    
+
+    privatevehicle(String a, String n) {
+        number = a;
+        name = n;
+    }
+
+    
+    @Override
+    public String privatevehicles()
+    {
+        return number+name;
+    }
+
+    @Override
+    public String transportvehicles() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
+
+class transportvehicle extends car{
+    String number;
+    String name;
+    public transportvehicle(String a, String n){
+        number = a;
+        name = n;
+    }
+    @Override
+    public String transportvehicles()
+    {
+        return number+name;
+    }
+
+    
+
+    @Override
+    public String privatevehicles() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
+
+   
+public abstract class car{
+    
+    public abstract String transportvehicles();
+    public abstract String privatevehicles();
+    
+    
+    
+    
+    
+    
+    
+
+    
+}
+class car1{
+    public static void main (String args[]){
+        
+    car obj1 = new privatevehicle("TN59M1003","ASHOK");
+    car obj2 = new transportvehicle("TN59BA3411","AAKASH");
+    System.out.println(obj2.transportvehicles());
+    System.out.println(obj1.privatevehicles());
+    
+    
+    }
+}
