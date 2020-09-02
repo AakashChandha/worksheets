@@ -1,80 +1,86 @@
-/*
+*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package worksheet;
+import java.util.Scanner;
 /**
  *
  * @author aakashchandha
  */
-class privatevehicle extends car {
-    String number;
-    String name;
+public class CarDetails {
+    public static void main(String args[]){
+    Scanner input = new Scanner(System.in);
+    PrivateVehicles A = new PrivateVehicles("","","","","");
+    TransportVehicles B = new TransportVehicles("","","","","","");
+    System.out.println("For private vehicles press number 1");
+    System.out.println("For transport vehicles press  number 2");
+    System.out.print("Enter the number[1 or 2] : ");
+    int a = input.nextInt();
+    if(a==1){
+        System.out.println("OWNER NAME : "+ A.OwnerName);
+        System.out.println("OWNER ADDRESS : "+ A.OwnerAddress);
+        System.out.println("REGISTER NUMBER : "+ A.RegNo);
+        System.out.println("MODEL NAME : "+ A.ModelName);
+        System.out.println("REGISTERED DATE : "+ A.RegDate);}
+        
+    else if(a==2){    
+         System.out.println("VALIDITY NUMBER : " + B.ValidityNo);
+          System.out.println("STARTING DATE : " + B.StartDate);
+          System.out.println("PERIOD OF TIME : " + B.Period);
+          System.out.println("REGISTER NUMBER : "+ B.RegNo);
+          System.out.println("MODEL NAME : "+ B.ModelName);
+          System.out.println("REGISTERED DATE : "+ B.RegDate);}
+    else{
+      System.out.println("INVALID OPTION");
+    }
     
-
-    privatevehicle(String a, String n) {
-        number = a;
-        name = n;
     }
-
+  
     
-    @Override
-    public String privatevehicles()
-    {
-        return number+name;
-    }
+   
+} 
+ 
 
-    @Override
-    public String transportvehicles() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}
-
-class transportvehicle extends car{
-    String number;
-    String name;
-    public transportvehicle(String a, String n){
-        number = a;
-        name = n;
-    }
-    @Override
-    public String transportvehicles()
-    {
-        return number+name;
-    }
-
+abstract class Car{
+    String RegNo = "19CSE096";
+    String ModelName = " Elantra" ;
+    String RegDate = "17/11/2019";
     
-
-    @Override
-    public String privatevehicles() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
     }
-}
+
+
+class PrivateVehicles extends Car {
+
+  String OwnerName,OwnerAddress;
+  public PrivateVehicles(String OwnerName,String OwnerAddress, String RegNo,String ModelName,String RegDate){
+ 
+  
+  OwnerName = "Aakash";
+  OwnerAddress = "annanagar";
+  this.OwnerName = OwnerName;
+  this.OwnerAddress = OwnerAddress;
+  
+  
+  }
 
    
-public abstract class car{
-    
-    public abstract String transportvehicles();
-    public abstract String privatevehicles();
-    
-    
-    
-    
-    
-    
-    
-
-    
 }
-class car1{
-    public static void main (String args[]){
-        
-    car obj1 = new privatevehicle("TN59M1003","ASHOK");
-    car obj2 = new transportvehicle("TN59BA3411","AAKASH");
-    System.out.println(obj2.transportvehicles());
-    System.out.println(obj1.privatevehicles());
+class TransportVehicles extends Car{
+    String ValidityNo;  String StartDate ;String Period;
+     public TransportVehicles(String ValidityNo,  String StartDate ,String Period, String RegNo,String ModelName,String RegDate){
+     ValidityNo = "yyu5567w";
+     StartDate  = "18/11/2019";
+     Period = "90 days";
+     this.ValidityNo = ValidityNo;
+     this.StartDate = StartDate;
+     this.Period = Period;
     
     
-    }
+     
+     }
+     
+      
 }
