@@ -1,0 +1,42 @@
+*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package assignment9;
+import java.util.Scanner;
+/**
+ *
+ * @author aakashchandha
+ */
+public class assignment9one{
+    public static void main(String args[]){
+     UserDefinedException_Hello obj= obj  UserDefinedException_Hello();
+      try{
+      obj.hellofilter();
+      }
+      catch(exceptionhello e){
+      System.out.println(e);
+      }
+      
+     
+     }
+    void hellofilter() throws exceptionhello{
+        Scanner input = new Scanner(System.in);
+        System.out.print("input with a string: ");
+    String compare = input.next();
+    if( "hello".equals(s)){
+    throw new exceptionhello("not accepted");
+    }
+    else{
+    System.out.println("input accepted");
+    }
+    }
+   
+}
+class exceptionhello extends Exception{
+
+    exceptionhello(String msg){
+    super(msg);
+    }
+}
