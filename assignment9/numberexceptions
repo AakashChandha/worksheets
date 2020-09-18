@@ -1,0 +1,69 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package UserDefinedException;
+import java.util.*;
+/**
+ *
+ * @author aakashchandha
+ */
+public class numberexceptions  {
+    public static void main(String[] args ){
+       try{
+        checkinginput();
+       }
+        
+     catch(notvalidinteger e){
+     System.out.println(e);
+     }
+    }
+  static void checker() throw notvalidinteger{ 
+      
+  Scanner input = new Scanner(System.in);
+  System.out.print("enter the first integer);
+  String one = input.next();
+  System.out.print("enter the second integer ");
+  String two = input.next();
+  char []strarray=one.toCharArray();
+
+  for(int i =0; i<one.length()-1;i++){
+    if(strarray[i]<=57 && strarray[i]>=48){
+      
+       continue;
+    }
+    else{
+     throw new notvalidinteger("improper integer input");
+    }   
+  }
+  
+  
+     
+     char []striarray=two.toCharArray();
+     
+      for(int i =0; i<striarray.length()-1;i++){
+      if(striarray[i]<=57 &&striarray[i]>=48){
+          
+          continue;
+        }
+      else{
+     throw new notvalidinteger("improper integer input");
+     }
+    
+  }
+    int first  = Integer.parseInt(one);
+    int second  = Integer.parseInt(two);
+    System.out.println("added value for the right integer+(m+n));  
+  }  
+ 
+  
+  
+  } 
+
+class notvalidinteger extends Exception{
+public notvalidinteger(String con)
+   {
+   super(con);
+   }
+}
