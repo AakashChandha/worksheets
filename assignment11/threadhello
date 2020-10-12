@@ -9,20 +9,20 @@ package java10;
  *
  * @author aakashchandha
  */
-class MyThread extends Thread { 
+class threadtesting1 extends Thread { 
 
-  public MyThread (String s) { 
+  public threadtesting1 (String s) { 
     super(s);
   }
  
   @Override
   public void run() { 
-    System.out.println("Hello, I am "+ getName()); 
+    System.out.println("Hello I am "+ getName()); 
   } 
 }
 public class threadtesting {
     public static void main (String arg[]) { 
-    MyThread t1, t2, t3, t4; 
+    threadtesting1 t1, t2, t3, t4; 
 
     t1 = new MyThread ("Thread #1"); 
     t2 = new MyThread ("Thread #2"); 
