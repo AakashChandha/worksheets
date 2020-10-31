@@ -17,7 +17,7 @@ import javax.swing.SwingConstants;
 
 /**
  *
- * @author Sonal L R
+ * @author aakashchandha
  */
 public class Conversion extends JFrame implements ActionListener{
     JFrame f;
