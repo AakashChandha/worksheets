@@ -14,13 +14,13 @@ import javax.swing.JScrollBar;
 
 /**
  *
- * @author Sonal L R
+ * @author aakashchandha
  */
 public class Colour_slider implements AdjustmentListener{
     JFrame f;
     JScrollBar s1,s2,s3;
-    Colour_slider()
-    {
+     Colour_slider()
+     {
         f=new JFrame("Color Slider");
         s1=new JScrollBar(JScrollBar.VERTICAL,0,0,0,128);
         s2=new JScrollBar(JScrollBar.VERTICAL,0,0,0,128);
@@ -38,15 +38,15 @@ public class Colour_slider implements AdjustmentListener{
         f.setLayout(null);
         f.setVisible(true);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
+      }
     public void adjustmentValueChanged(AdjustmentEvent ae)
-    {
+   {
         int red=s1.getValue();
         int green=s1.getValue();
         int blue=s1.getValue();
         System.out.println(red);
         f.getContentPane().setBackground(new Color(red,green,blue));
-    }
+     }
     public static void main(String[] args){
         new Colour_slider();
     }
